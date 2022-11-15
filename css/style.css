@@ -1,0 +1,68 @@
+body {
+    background-image: url("../img/warrior.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font: 14px Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    background-color: #1b1b1b;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-link {
+    color: white;
+}
+.nav-item {
+    margin: 0 3px;
+}
+
+.nav-link-light {
+    color: white;
+}
+
+.nav-link-light:hover {
+    color: rgb(199, 199, 199);
+}
+
+#descricao {
+    color: white;
+}
+
+/*dropdown back color*/
+.drop {
+    background-color: rgba(0, 0, 0, 0.9);
+    right: 0;
+    left: auto !important;
+    margin-right: 40%;
+    margin-top: 25% !important;
+}
+
+/*dropdown hover color*/
+.drop-hov:hover {
+    background-color: rgb(114, 114, 114);
+    margin-left: 100%;
+}
+
+.drop-b {
+    background-image: url("../img/retrato.jpg");
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    border: 0;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-right: 60px;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  left: 40px;
+  bottom: 45%;
+}
+
+
