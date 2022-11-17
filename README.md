@@ -1,2 +1,3 @@
 # Netflix_project
-Recriando o site Netflix
+Recriando o site da Netflix.
+
