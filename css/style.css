@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     background-image: url("../img/warrior.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,6 +9,10 @@ body {
 .navbar-scrolled {
     background-color: #000000;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-nav ul {
+  align-items: center;
 }
 
 .navbar {
@@ -65,7 +70,7 @@ dropdown back color*/
 }
 
 .dropdown-toggle::after {
-  position: static;
+  position: relative;
   left: 40px;
   bottom: 45%;
 }
@@ -82,20 +87,20 @@ dropdown back color*/
 
 /*dropdown hover color*/
 .drop-hov-n:hover {
-    background-color: rgb(112, 112, 112);
+    background-color: rgba(112, 112, 112, 0);
 }
 
 .drop-n {
     background-image: url("../img/bell.ico");
     background-color: transparent;
-    width: 24px;
-    height: 24px;
     fill: none;
     background-size: 100%;
     border: 0;
     background-repeat: no-repeat;
     object-fit: cover;
     margin-right: 15px;
+    width: 22px;
+    height: 22px;
 }
 
 .dropdown-toggle {
@@ -106,6 +111,7 @@ dropdown back color*/
   position: absolute;
   left: 40px;
   bottom: 45%;
+  filter: invert(1);
 }
 
 /* button */
@@ -157,6 +163,7 @@ dropdown back color*/
 }
 
 .section {
+    color: white;
     max-width: 700px;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
@@ -171,58 +178,123 @@ dropdown back color*/
 }
 
 /* carrosel */
-.cards-wrapper {
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --handle-size: 3rem;
+    --img-gap: .25rem;
+  }
+  
+  .container {
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    padding: inherit;
   }
-  .card img {
-    max-width: 100%;
-    max-height: 100%;
+  
+  .slider {
+    --items-per-screen: 4;
+    --slider-index: 0;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 var(--img-gap);
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
   }
-  .card {
-    width: 17rem;
-    height: 10.5rem;
-    background-color: rgb(0, 0, 0);
-    margin: 0 0.5em;
-    box-shadow: 2px 6px 8px 0 rgba(0, 0, 0, 0.18);
+  
+  .slider > img {
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    aspect-ratio: 16 / 9;
+    padding: var(--img-gap);
+    border-radius: 1rem;
+  }
+  
+  .handle {
     border: none;
-    border-radius: 0;
+    border-radius: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, .25);
+    z-index: 10;
+    margin: var(--img-gap) 0;
+    width: var(--handle-size);
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    line-height: 0;
+    transition: background-color 150ms ease-in-out;
   }
-  .carousel-inner {
-    padding: 1em;
+  
+  .left-handle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
-  .carousel-control-prev,
-  .carousel-control-next {
-    background-color: #8c7f7f00;
-    width: 6vh;
-    height: 17.2vh;
-    top: 50%;
-    border-radius: 0.4rem;
-    transform: translateY(-50%);
+  
+  .right-handle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
-  @media (min-width: 768px) {
-    .card img {
-      height: 11em;
+  
+  .handle:hover,
+  .handle:focus {
+    background-color: rgba(255, 255, 255, .5);
+  }
+  
+  .text {
+    transition: transform 150ms ease-in-out;
+  }
+  
+  .handle:hover .text,
+  .handle:focus .text {
+    transform: scale(1.2);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem calc(var(--img-gap) * 2 + var(--handle-size));
+    align-items: center;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .progress-bar {
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+  }
+  
+  .progress-item {
+    flex: 0 0 1.5rem;
+    min-width: 1.5rem;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .5);
+  }
+  
+  .progress-item.active {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+  @media (max-width: 1000px) {
+    .slider {
+      --items-per-screen: 3;
     }
   }
-
-  .carousel-control-prev:not(:disabled):hover,
-  .carousel-control-next:not(:disabled):hover {
-    background-color: rgba(0, 0, 0, 0.348);
+  
+  @media (max-width: 500px) {
+    .slider {
+      --items-per-screen: 2;
+    }
   }
-
- 
-
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    background-image: none;
-}
-
-.box:not(:disabled):hover {
-    background-image: url("../img/right-arrow.ico");
-    width: 6vh;
-    height: 17.2vh;
-    background-repeat: no-repeat;
-    margin-top: 100px;
-}
+  
+  
