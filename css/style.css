@@ -1,42 +1,51 @@
 body {
+  background-color: #141414;
     margin: 0;
-    background-image: url("../img/warrior.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url("../img/warrior.jpg"); */
+    
     font: 14px Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    background-attachment: fixed;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  align-items: baseline;
+  padding-top: 0;
 }
 
 .navbar-scrolled {
-    background-color: #000000;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar-nav ul {
-  align-items: center;
-}
-
-.navbar {
-    transition: all 1s;
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Adicionado para centralizar os links */
 }
 
 .nav-link {
-    color: white;
+  color: white;
 }
+
 .nav-item {
-    margin: 0 3px;
-    margin-top: 20px;
+  margin: 0 3px;
+  margin-top: 20px;
 }
 
 .nav-link-light {
-    color: white;
+  color: white;
 }
 
 .nav-link-light:hover {
-    color: rgb(199, 199, 199);
+  color: rgb(199, 199, 199);
 }
 
 #descricao {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 /*perfil drop
@@ -99,8 +108,8 @@ dropdown back color*/
     background-repeat: no-repeat;
     object-fit: cover;
     margin-right: 15px;
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
 }
 
 .dropdown-toggle {
@@ -117,8 +126,6 @@ dropdown back color*/
 /* button */
 .bttn {
     margin-top: 5rem;
-    margin-left: 65px;
-    margin-right: 300px;
     margin-bottom: 150px;
 }
 
@@ -162,20 +169,32 @@ dropdown back color*/
     background-color: rgba(109, 109, 110, 0.817);
 }
 
-.section {
+.col-9 {
+    padding-top: 30rem;
+    padding-left: 1rem;
+  }
+
+  .hero-section {
+    background-image: url("../img/warrior.jpg");
     color: white;
-    max-width: 700px;
-    text-transform: uppercase;
     text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
-    word-break: break-word;
-    margin-top: 30rem;
-    margin-left: 65px;
-    margin-right: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+    position: relative; /* Adiciona position:relative para que o elemento filho possa ser posicionado corretamente */
 }
 
-.h5 {
-    text-transform:none
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0)); /* Adiciona um gradiente para suavizar a borda */
+    filter: blur(10px); /* Adiciona um leve efeito de desfoque */
 }
+
 
 /* carrosel */
   *, *::after, *::before {
@@ -296,5 +315,7 @@ dropdown back color*/
       --items-per-screen: 2;
     }
   }
+
+  
   
   

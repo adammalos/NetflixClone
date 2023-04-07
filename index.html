@@ -19,60 +19,107 @@
 <body>
     <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="img/Netflix_29.jpg" class="mx-5" alt="Bootstrap" width="92.5" height="24">
+          <img src="img/Netflix_29.jpg" class="mx-5" alt="Netflix logo" width="92.5" height="24">
         </a>
+      
         <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-light" href="inicio">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-light" href="series">Séries</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-light" href="flimes">Filmes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-light" href="lista">Minha lista</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <a class="nav-link nav-link-light" href="inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-light" href="series">Séries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-light" href="filmes">Filmes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-light" href="lista">Minha lista</a>
+            </li>
+          </ul>
         </div>
-
-        <!--notificação-->
+      
+        <!-- notificação -->
         <div class="dropdown">
-            <button onmouseover="dropItem(this)" onmouseout="normalItem(this)" class="btn drop-n" type="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-            </button>
-            <ul class="dropdown-menu drop-item-n">
-                <li><a class="dropdown-item text-light drop-hov-n" href="#">Action</a></li>
-                <li><a class="dropdown-item text-light drop-hov-n" href="#">Another action</a></li>
-                <li><a class="dropdown-item text-light drop-hov-n" href="#">Something else here</a></li>
-            </ul>
+          <button onmouseover="dropItem(this)" onmouseout="normalItem(this)" class="btn drop-n" type="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+          </button>
+      
+          <ul class="dropdown-menu drop-item-n">
+            <li><a class="dropdown-item text-light drop-hov-n" href="#">Action</a></li>
+            <li><a class="dropdown-item text-light drop-hov-n" href="#">Another action</a></li>
+            <li><a class="dropdown-item text-light drop-hov-n" href="#">Something else here</a></li>
+          </ul>
         </div>
-
-        <!--drop perfil-->
+      
+        <!-- drop perfil -->
         <div class="dropdown">
-            <button class="btn dropdown-toggle drop-p" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            </button>
-            <ul class="dropdown-menu drop-item-p">
-                <li><a class="dropdown-item text-light drop-hov-p" href="#">Action</a></li>
-                <li><a class="dropdown-item text-light drop-hov-p" href="#">Another action</a></li>
-                <li><a class="dropdown-item text-light drop-hov-p" href="#">Something else here</a></li>
-            </ul>
+          <button class="btn dropdown-toggle drop-p" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          </button>
+      
+          <ul class="dropdown-menu drop-item-p">
+            <li><a class="dropdown-item text-light drop-hov-p" href="#">Action</a></li>
+            <li><a class="dropdown-item text-light drop-hov-p" href="#">Another action</a></li>
+            <li><a class="dropdown-item text-light drop-hov-p" href="#">Something else here</a></li>
+          </ul>
         </div>
-    </nav>
+      </nav>
+      
+      
 
-    <section class="section">
-        <h1>Warrior Num</h1>
-        <h5 class="h5">Lorem ipsum dolor sit amet. Qui dolorum expedita vel saepe reiciendis in
-            dolorem mollitia aut placeat totam et nostrum earum qui animi provident hic totam quam.
-            Est dolorem cumque et galisum nemo quo eius quod eum omnis laboriosam.</h5>
+    <section class="hero-section">
+        <div class="container mx-0">
+            <div class="row justify-content-start px-5">   
+                <div class="col-9">
+                    <div class="current-title fs-1">
+                        Warrior Num
+                    </div>
+                    <div class="current-summary text-start text-break fs-4">
+                        Lorem ipsum dolor sit amet. Qui dolorum expedita vel saepe reiciendis in
+                        dolorem mollitia aut placeat totam et nostrum earum qui animi provident hic totam quam.
+                        Est dolorem cumque et galisum nemo quo eius quod eum omnis laboriosam.
+                    </div>
+                    <div class="bttn">
+                        <button type="button" class="btn btn-primary btn-lg button-pri button-hov-pri btt">Assistir</button>
+                        <button type="button" class="btn btn-secondary btn-lg button-sec button-hov-sec btt">Mais
+                            informações</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header">
+                    <h3 class="title">Só na Netflix</h3>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="container">
+                    <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                    </button>
+                    <div class="slider">
+                        <img src="img/serie1.jpg">
+                        <img src="img/serie2.jpg">
+                        <img src="img/serie3.jpg">
+                        <img src="img/serie4.jpg">
+                        <img src="img/serie5.jpg">
+                        <img src="img/serie6.jpg">
+                        <img src="img/serie7.jpg">
+                        <img src="img/serie8.jpg">
+                        <img src="img/serie9.jpg">
+                        <img src="img/serie10.jpg">
+                        <img src="img/serie11.jpg">
+                        <img src="img/serie12.jpg">
+                    </div>
+                    <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <div class="bttn">
-        <button type="button" class="btn btn-primary btn-lg button-pri button-hov-pri btt">Assistir</button>
-        <button type="button" class="btn btn-secondary btn-lg button-sec button-hov-sec btt">Mais informações</button>
-    </div>
+    <!-- slider 2 -->
     <div class="container-fluid">
         <div class="row">
             <div class="header">
