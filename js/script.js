@@ -8,15 +8,7 @@
         }
     });
 
-    function dropItem(x) {
-        // x.style.height = "64px";
-        // x.style.width = "64px";
-    }
-
-    function normalItem(x) {
-        x.style.height = "24px";
-        x.style.width = "24px";
-    }
+    
 
     
 

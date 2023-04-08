@@ -1,20 +1,8 @@
 body {
   background-color: #141414;
     margin: 0;
-    /* background-image: url("../img/warrior.jpg"); */
-    
     font: 14px Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
     background-attachment: fixed;
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  align-items: baseline;
-  padding-top: 0;
 }
 
 .navbar-scrolled {
@@ -22,26 +10,33 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar-nav {
+.navbar {
+    transition: all 1s;
+}
+
+.container-fluid {
+  justify-content:flex-start !important;
+}
+
+.drops {
+  padding-left: 66rem;
+  padding-right: auto;
+}
+
+.nav-custom * {
   display: flex;
-  justify-content: center; /* Adicionado para centralizar os links */
-}
-
-.nav-link {
+  align-items: center;
+  list-style-type: none;
   color: white;
+  gap: 1.2rem;
 }
 
-.nav-item {
-  margin: 0 3px;
-  margin-top: 20px;
+.lista-link img {
+  border-radius: 20%;
 }
 
-.nav-link-light {
-  color: white;
-}
-
-.nav-link-light:hover {
-  color: rgb(199, 199, 199);
+.nav-link:hover {
+  color: rgb(176, 176, 176);
 }
 
 #descricao {
@@ -58,70 +53,6 @@ dropdown back color*/
     margin-top: 25% !important;
 }
 
-/*dropdown hover color*/
-.drop-hov-p:hover {
-    background-color: rgb(114, 114, 114);
-}
-
-.drop-p {
-    background-image: url("../img/retrato.jpg");
-    width: 32px;
-    height: 32px;
-    background-size: 100%;
-    border: 0;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    margin-right: 80px;
-}
-
-.dropdown-toggle {
-    padding-top: 15px
-}
-
-.dropdown-toggle::after {
-  position: relative;
-  left: 40px;
-  bottom: 45%;
-}
-
-/*notificação drop
-dropdown back color*/
-.drop-item-n {
-    background-color: rgba(0, 0, 0, 0.813);
-    right: 0;
-    left: auto !important;
-    margin-right: 40%;
-    margin-top: 25% !important;
-}
-
-/*dropdown hover color*/
-.drop-hov-n:hover {
-    background-color: rgba(112, 112, 112, 0);
-}
-
-.drop-n {
-    background-image: url("../img/bell.ico");
-    background-color: transparent;
-    fill: none;
-    background-size: 100%;
-    border: 0;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    margin-right: 15px;
-    width: 23px;
-    height: 23px;
-}
-
-.dropdown-toggle {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-  position: absolute;
-  left: 40px;
-  bottom: 45%;
-  filter: invert(1);
-}
 
 /* button */
 .bttn {
@@ -315,6 +246,7 @@ dropdown back color*/
       --items-per-screen: 2;
     }
   }
+
 
   
   
