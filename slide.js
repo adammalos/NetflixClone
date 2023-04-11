@@ -1,18 +1,39 @@
-    const navEL = document.querySelector('.navbar');
-    console.log(document.getElementsByClassName('.navbar'))
-    window.addEventListener('scroll', () => {
-        if (window.scrollY >= 56) {
-            navEL.classList.add('navbar-scrolled')
-        } else if (window.scrollY < 56) {
-            navEL.classList.remove('navbar-scrolled');
-        }
-    });
+var elements = document.getElementsByClassName("carrossel");
 
-    
-
-    
-
-
+for (var i = 0; i < elements.length; i++) {
+  ReactDOM.render(
+    <div className="container-fluid">
+    <div className="row">
+      <div className="header">
+        <h3 className="title">Só na Netflix</h3>
+        <div className="progress-bar"></div>
+      </div>
+      <div className="container">
+        <button className="handle left-handle">
+          <div className="text">&#8249;</div>
+        </button>
+        <div className="slider">
+          <img src="img/serie1.jpg" alt="Série 1" />
+          <img src="img/serie2.jpg" alt="Série 2" />
+          <img src="img/serie3.jpg" alt="Série 3" />
+          <img src="img/serie4.jpg" alt="Série 4" />
+          <img src="img/serie5.jpg" alt="Série 5" />
+          <img src="img/serie6.jpg" alt="Série 6" />
+          <img src="img/serie7.jpg" alt="Série 7" />
+          <img src="img/serie8.jpg" alt="Série 8" />
+          <img src="img/serie9.jpg" alt="Série 9" />
+          <img src="img/serie10.jpg" alt="Série 10" />
+          <img src="img/serie11.jpg" alt="Série 11" />
+          <img src="img/serie12.jpg" alt="Série 12" />
+        </div>
+        <button className="handle right-handle">
+          <div className="text">&#8250;</div>
+        </button>
+      </div>
+    </div>
+  </div>, 
+  elements[i]);
+}
     document.addEventListener("click", e => {
       let handle
       if (e.target.matches(".handle")) {
